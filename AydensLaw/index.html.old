@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet/less" type="text/css" href="twitter-bootstrap-37d0a30/less/bootstrap.less" />
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/ayden.css">
+	<script src="less.js" type="text/javascript"></script>
+	<title>AYDEN&#39;S LAW.</title>
+</head>
+<body id="justice">
+	<div id="wrapper">
+		<div class="row">  <!-- CONTACT US row -->
+			<div class="span3 offset9"><a href="mailto:pressoffice@beatbullying.org?Subject=Ayden's Law." target="_blank"><span class="ctr"><p class="contact_btn">CONTACT US</p></span></a></div>  <!-- CONTACT US -->
+		</div>
+		<div class="row" id="banner">  <!-- LOGOs AND TITLE row -->
+			<div class="span12 white_bg">
+				<div class="nested">  <!-- Nested Text Section -->
+						<div id="bb_logo" class="span3 first"><a href="http://www.beatbullying.org/" target="_blank"><img src="images/BeatBullying-RGB-190px.png" alt="BeatBullying logo" /></a></div>  <!-- BB LOGO -->
+						<div class="span6"><span class="ctr"><h1>Ayden&#39;s Law.</h1></span></div>  <!-- TITLE -->
+						<div id="sun_logo" class="span3"><a href="http://www.thesun.co.uk" target="_blank"><img src="images/the_sun_logo_200.jpg" alt="The Sun logo" /></a></div>  <!-- SUN LOGO -->
+				</div>	
+			</div>
+		</div>
+		
+		<div class="row">  <!-- FIRST TEXT row -->
+			<div class="span12"><!-- INTRO -->
+				<div class="row">
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span9 clearfix white_bg block_row">
+						<h2 class="h2_blue">What is Ayden&#39;s Law?</h2>
+							<div class="span6">
+								<img id="ayden" class="right" src="images/Ayden.png" alt="Ayden" />
+								<p>On <span class="red">XX</span> March 2013, 14 year old Ayden Olson took his own life. He&#39;d been bullied to death. 
+								Tragically, Ayden&#39;s name is only the latest to be added to a growing list. 
+								But while the victims themselves may have found peace, their families are left behind, 
+								scarred forever by the agony of losing a child.
+								</p>
+								<p>Ayden&#39;s Law is a campaign on behalf of all those young people, their families – 
+								and any child or young person being bullied today.
+								</p>
+								<p>BeatBullying, The Sun, and families of children like Ayden are calling on David Cameron to take action. 
+								We want the Prime Minister to call a summit to discuss how we can prevent any more tragedies – 
+								and the creation of Ayden&#39;s Law, a new children&#39;s anti-bullying bill 
+								designed to stop bullying in our society once and for all.
+								</p>
+								<p class="gap_below">Read <a href="letter_to_pm.html" target="_blank">our letter to David Cameron</a>.</p>
+							</div>
+							<div class="span3 right first">
+								<div id="parent">
+									<h3>Shy Keenan</h3>
+									<p>&quot;This is a quote.  This is a quote.  This is a quote.&quot;</p>
+								</div>
+							</div>
+						</div>
+						<div class="span3"><a href="#"><img src="images/SignPetition.png" alt="Click here to Sign the Petition" /></a></div>  <!-- PETITION -->
+
+						<div id="contentWhite" class="span3">
+						
+							<h2 class="h2_blue">Twitter</h2>
+								<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+								
+								<script>
+									new TWTR.Widget({
+									  version: 2,
+									  type: 'profile',
+									  rpp: 2,
+									  interval: 6000,
+									  width: 220,
+									  height: 235,
+									  theme: {
+										shell: {
+										  background: '#ffffff',
+										  color: '#ffffff'
+										},
+										tweets: {
+										  background: '#fcfcfc',
+										  color: '#140314',
+										  links: '#0f80fa'
+										}
+									  },
+
+									  features: {
+										scrollbar: false,
+										loop: false,
+										live: false,
+										hashtags: true,
+										timestamp: true,
+										avatars: false,
+										behavior: 'all'
+									  }
+									}).render().setUser('Beatbullying').start();
+
+								</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="row">  <!-- SECOND TEXT row -->
+			<div class="span12">
+				<div class="span9 first"><a href="index.html" id="nav-home"><h2 class="h2_blue first">The Children &#39;s Anti-Bullying Bill</h2></a>  <!-- MODULES -->
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span9 white_bg block_row first">
+							<div class="span3 nav">
+								<ul class="vertical nav first">
+									<li><a href="#" id="nav-corporate"><h2 class="h2_blue">Corporate accountability</h2></a></li>
+									<li><a href="#" id="nav-justice" class="active"><h2 class=" h2_blue">Justice for victims</h2></a></li>
+									<li><a href="#" id="nav-community"><h2 class=" h2_blue">Community protection</h2></a></li>
+									<li><a href="#" id="nav-online"><h2 class=" h2_blue">Safety online</h2></a></li>
+									<li><a href="#" id="nav-family"><h2 class=" h2_blue">Family support</h2></a></li>
+								</ul>	
+							</div>
+							<div class="span6 right">
+								<p>We are calling on the Prime Minister to support a new law to protect children who become victims of bullying. 
+								Ayden&#39;s Law would:</p>
+								<ol>
+									<li>Make bullying and intimidation a criminal offence</li>
+									<li>Make corporate neglect a criminal offence, leaving schools and colleges legally accountable for bullying</li>
+									<li>Protect children from cyberbullying</li>
+									<li>Increase community-based bullying prevention</li>
+									<li>Support families with children who bully to change their behavior</li>
+								</ol>
+								<p>Find out more detail about the Bill using the tabs on the left</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="span3 right btns"><a href="#"><img src="images/TestPlaceHolder.jpg" alt="test" /></a></div>  <!-- btn holder -->
+				<div class="span3 right btns"><a href="#"><img src="images/TestPlaceHolder.jpg" alt="test" /></a></div>  <!-- btn holder -->
+			</div>
+		</div>
+
+		<div class="row">  <!-- TELL YOUR STORY row -->
+			<div class="span12"><a href="mailto:pressoffice@beatbullying.org?Subject=Ayden's Law: My Story." target="_blank"><span class="ctr"><h2 class="sun_red">TELL YOUR STORY</h2></span></a></div>  <!-- YOUR STORY -->
+		</div>
+		<div class="row">  <!-- FOOTER LOGO row -->
+		<div class="span12">
+			<div class="span6 offset6 caveat"><a href="http://www.thebbgroup.org/" target="_blank"><p>BeatBullying is part of The BB Group<br />
+			The BeatBullying Group is registered charity number 1097631 Company registered in England and Wales, no. 03807909</p></a></div>  <!-- BBGroup LOGO -->
+		</div>
+		</div>
+	</div>  <!-- End wrapper div -->
+</body>
+</html>

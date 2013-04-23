@@ -1,0 +1,61 @@
+font-size:0.7em;
+line-height:1.3em;
+
+caveat
+
+
+
+<div class="caveat">
+<p>
+BeatBullying is part of The BB Group
+<br/>
+The BeatBullying Group is registered charity number 1097631 Company registered in England and Wales, no. 03807909
+</p>
+</div>
+<div class="clear"/>
+</div>
+
+<img src="images/TheBBGroup.png" alt="The BBGroup logo" />
+
+
+display:block;
+
+ul.vertical li {
+
+}
+
+								<div class="span9 offset3">
+								<p>General text in the big white box area</p>
+
+
+
+		<div class="row">  <!-- READ MORE MODULES row -->
+			<div class="span3"><h2 class="h2_blue">CORPORATE</h2>  <!-- CORPORATE Module -->
+				<div class="row">
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span3"><p class="white_bg">Corporate Text.  This is the corporate text.  This is the Corporate text.  This is the corporate text.  This is the Corporate text.  This is the corporate text.  This is the Corporate text.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="span3"><h2 class="h2_blue">CRIMINAL</h2>  <!-- CRIMINAL Module -->
+				<div class="row">
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span3"><p class="white_bg">CRIMINAL Text.  This is the criminal text.  This is the criminal text.  This is the criminal text.  This is the criminal text.  This is the criminal text.  This is the criminal text.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="span3"><h2 class="h2_blue">FAMILY</h2> <!-- FAMILY Module -->
+				<div class="row">
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span3"><p class="white_bg">FAMILY Text.  This is the family text.  This is the family text.  This is the family text.  This is the family text.  This is the family text.  This is the family text.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="span3"><h2 class="h2_blue">ONLINE</h2> <!-- ONLINE Module -->
+				<div class="row">
+					<div class="nested">  <!-- Nested Text Section -->
+						<div class="span3"><p class="white_bg">ONLINE Text.  This is the online text.  This is the online text.  This is the online text.  This is the online text.  This is the online text.  This is the online text.</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
