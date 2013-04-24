@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 
-app = Flask('aydens-law')
+app = Flask(__name__)
 app.config.from_object('app.settings')
 
 @app.errorhandler(404)
