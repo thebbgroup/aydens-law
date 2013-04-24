@@ -1,0 +1,24 @@
+/*! fonts */
+.load-font (@name, @filename) {
+    font-family: @name;
+    src: url("@{filename}.eot#iefix") format("embedded-opentype"),
+         url("@{filename}.woff") format("woff"),
+         url("@{filename}.ttf") format("truetype"),
+         url("@{filename}.svg#@{name}") format("svg");
+}
+
+@font-face {
+    .load-font("TheMixRegular", "fonts/themix-5-regular-webfont");
+}
+
+@font-face {
+    .load-font("TheMixBold", "fonts/themix-7-bold-webfont");
+}
+
+@font-face {
+    .load-font("TheMixSemiBold", "fonts/themix-6-semibold-webfont");
+}
+
+@font-face {
+    .load-font("TheMixBlack", "fonts/themix-9-black-webfont");
+}

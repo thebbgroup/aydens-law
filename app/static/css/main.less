@@ -1,0 +1,229 @@
+@import "normalize.less";
+@import "fonts.less";
+/*! main */
+@light-blue: #96bddd;
+@dark-blue: #0a90c7;
+@red: #cc3333;
+@white: #fff;
+@black: #000;
+
+@title-fonts: TheMixBold, Arial, sans-serif;
+
+html {
+    background-color: @light-blue;
+}
+
+body {
+    width: 960px;
+    margin: 50px auto 0;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: @title-fonts;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#header {
+    background: @white url(images/the_sun_logo_220.jpg) right center no-repeat;
+    margin-bottom: 20px;
+    border: 1px solid @white;
+    border-width: 0 10px 0;
+
+    h1 {
+        color: @dark-blue;
+        font-family: TheMixBlack, Arial, sans-serif;
+        font-size: 400%;
+        font-weight: 900;
+        text-align: center;
+        line-height: 123px;
+        margin: 0;
+        background: transparent url(images/BeatBullying-RGB-160px.png) left center no-repeat;
+    }
+}
+
+#contact {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: @dark-blue;
+    color: @white;
+    height: 30px;
+    line-height: 2;
+    text-align: center;
+    width: 220px;
+    padding: 0 10px;
+}
+
+#main {
+    width: 700px;
+    float: left;
+    clear: left;
+
+    .section {
+        background-color: @white;
+        padding: 10px 20px 0;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        h2 {
+            background-color: @dark-blue;
+            color: @white;
+            font-weight: 900;
+            margin: -10px -20px 0;
+            padding: 10px 20px;
+        }
+
+        div {
+            width: 460px;
+            padding: 0;
+            float: left;
+        }
+
+        blockquote {
+            background-color: @light-blue;
+            color: @white;
+            padding: 10px 20px;
+            float: right;
+            margin: 20px 0 10px 10px;
+            clear: none;
+            width: 150px;
+            font-style: italic;
+            font-weight: 100;
+
+            h3 {
+                text-transform: uppercase;
+                font-family: @title-fonts;
+                font-style: normal;
+            }
+        }
+    }
+}
+
+#ayden-photo {
+    float: right;
+    margin: 20px 10px 20px 20px;
+    clear: none;
+}
+
+.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 20px 0 -20px;
+    float: left;
+    width: 160px;
+
+    li {
+        margin-bottom: 10px;
+
+        a {
+            display: block;
+            background-color: @dark-blue;
+            color: @white;
+            font-family: @title-fonts;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+}
+
+.js #tabbed-content {
+    min-height: 260px;
+
+    .content {
+        display: none;
+    }
+
+    #default.content {
+        display: block;
+   }
+}
+
+
+h2 a {
+	text-decoration:none;
+	color: @white;
+}
+
+
+
+.cta {
+    background-color: @red;
+    text-transform: uppercase;
+
+    a {
+        color: @white;
+    }
+}
+
+#sidebar {
+    float: right;
+    width: 240px;
+
+    .box {
+        padding: 10px;
+        background-color: @dark-blue;
+        color: @white;
+        margin: 0 0 20px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .petition {
+        .cta;
+        background: @red url(images/SignPetition-240.png) top left no-repeat;
+        font-size: 0;
+        min-height: 186px;
+    }
+}
+
+#twitter {
+
+}
+
+#need-help {
+
+    .cta {
+        text-transform: uppercase;
+        font-family: @title-fonts;
+
+        a {
+            background-color: @light-blue;
+            display: block;
+            text-decoration: none;
+            color: @white;
+            padding: 5px 0 5px 5px;
+            height: 100px;
+        }
+
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 55px solid @dark-blue;
+            border-bottom: 56px solid @dark-blue;
+            border-left: 15px solid @light-blue;
+            float: right;
+            margin: -5px 0 0 10px;
+        }
+    }
+}
+
+#footer {
+    clear: both;
+}
+
+#tell-your-story {
+    display: block;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    clear: both;
+}
