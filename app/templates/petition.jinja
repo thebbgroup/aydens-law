@@ -1,0 +1,27 @@
+{% extends '_includes/html5_base.jinja' %}
+
+{% block title %} - Sign the Petition{% endblock %}
+
+{% block body_attr %} class="petition"{% endblock %}
+
+{% block header_title %}Sign the Petition{% endblock %}
+
+{% block content %}
+    {% from '_includes/form_macros.jinja' import form_field %}
+    <form method="post" action="{{ url_for('petition.sign') }}">
+        <fieldset>
+            <legend>Sign the Petition</legend>
+            {{ form_field(form.name) }}
+            {{ form_field(form.email) }}
+            {# form_field(form.dob) #}
+        </fieldset>
+        <fieldset>
+            <legend>Tell us a little more about you</legend>
+            {# some more form fields #}
+        </fieldset>
+        <div class="submit">
+            {{ form.csrf_token }}
+            <input type="submit" value="Sign">
+        </div>
+    </form>
+{% endblock %}

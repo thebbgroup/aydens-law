@@ -9,7 +9,7 @@ from .models import Signature
 petition_app = Blueprint('petition', __name__, template_folder='templates')
 
 @petition_app.route('/')
-def petition_form():
+def sign():
     form = PetitionForm()
     if form.validate_on_submit():
         sig = Signature(**form.data)
