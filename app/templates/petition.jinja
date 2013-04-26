@@ -24,4 +24,14 @@
             <input type="submit" value="Sign">
         </div>
     </form>
+    <div id="sidebar">
+        <div id="recent-sigs" class="box">
+            <h2>Recent Signatures</h2>
+            <ul>
+            {% for sig in sigs %}
+                <li>{{ sig.name }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
 {% endblock %}

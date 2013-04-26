@@ -15,7 +15,8 @@ def sign():
         sig = Signature(**form.data)
         sig.put()
         return redirect(url_for('petition.thanks'))
-    return render_template('petition.jinja', form=form)
+    sigs = Signature.query.order_by(Signature.created.desc()).limit(10).all()
+    return render_template('petition.jinja', form=form, sigs=sigs)
 
 @petition_app.route('/thanks')
 def thanks():
