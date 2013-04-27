@@ -76,6 +76,11 @@ h1, h2, h3 {
             font-weight: 900;
             margin: -10px -20px 0;
             padding: 10px 20px;
+
+            a {
+                text-decoration:none;
+                color: @white;
+            }
         }
 
         div {
@@ -145,14 +150,6 @@ h1, h2, h3 {
    }
 }
 
-
-h2 a {
-	text-decoration:none;
-	color: @white;
-}
-
-
-
 .cta {
     background-color: @red;
     text-transform: uppercase;
@@ -182,6 +179,14 @@ h2 a {
         background: @red url(images/SignPetition-240.png) top left no-repeat;
         font-size: 0;
         min-height: 186px;
+
+        a {
+            display: block;
+            height: 186px;
+            width: 220px;
+            padding: 10px;
+            margin: -10px;
+        }
     }
 }
 
@@ -218,14 +223,27 @@ h2 a {
 
 #footer {
     clear: both;
+    overflow: hidden;
+
+    .details {
+        float: right;
+        color: @white;
+        font-size: 80%;
+        padding: 10px 0 10px 84px;
+        min-height: 70px;
+        background: transparent url(images/bb-logo-64x50.png) 10px 20px no-repeat;
+    }
 }
 
 #tell-your-story {
     display: block;
     text-align: center;
     line-height: 2;
-    text-decoration: none;
     clear: both;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .petition {
