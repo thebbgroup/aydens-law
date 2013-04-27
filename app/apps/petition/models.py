@@ -1,4 +1,3 @@
-import logging
 from google.appengine.api import memcache
 from google.appengine.ext import db
 
@@ -13,7 +12,6 @@ class Signature(db.Model):
     def recent():
         sigs = memcache.get('recent-sigs')
         if sigs is None:
-            logging.info('fetching recent sigs from db')
             sigs = Signature.all().order("-created").fetch(limit=10)
             sigs = [sig.name for sig in sigs]
             memcache.set('recent-sigs', sigs, 3600)
@@ -31,17 +29,12 @@ class Signature(db.Model):
                 memcache.set(email, True, 300)
             return found
 
-        def log(x):
-            logging.info('searching db')
-            return x
-
-        return found_in(mc) or log(found_in(db))
+        return found_in(mc) or found_in(db)
 
     def save(self):
 
         # prevent duplicate signatures
         if not self.exists():
-            logging.info('inserting into db')
             self.put()
 
             # we don't care that this might not match the db
