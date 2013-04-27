@@ -12,6 +12,7 @@
     <script src="/static/js/jquery-1.8.3.min.js"></script>
 </head>
 <body{% block body_attr %}{% endblock %}>
+    {% include '_includes/google-analytics.jinja' %}
     <div id="header">
         <h1>{% block header_title %}{% endblock %}</h1>
     </div>
