@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 
 from app import app
 
@@ -8,15 +8,15 @@ from .models import Signature
 
 petition_app = Blueprint('petition', __name__, template_folder='templates')
 
-@petition_app.route('/')
+@petition_app.route('/', methods=['GET', 'POST'])
 def sign():
     form = PetitionForm()
+
     if form.validate_on_submit():
-        sig = Signature(**form.data)
-        sig.put()
+        Signature(**form.data).save()
         return redirect(url_for('petition.thanks'))
-    sigs = Signature.query.order_by(Signature.created.desc()).limit(10).all()
-    return render_template('petition.jinja', form=form, sigs=sigs)
+
+    return render_template('petition.jinja', form=form, sigs=Signature.recent())
 
 @petition_app.route('/thanks')
 def thanks():

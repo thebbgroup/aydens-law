@@ -4,7 +4,7 @@
 
 {% block body_attr %} class="petition"{% endblock %}
 
-{% block header_title %}Sign the Petition{% endblock %}
+{% block header_title %}Please Sign{% endblock %}
 
 {% block content %}
     {% from '_includes/form_macros.jinja' import form_field %}
@@ -29,7 +29,7 @@
             <h2>Recent Signatures</h2>
             <ul>
             {% for sig in sigs %}
-                <li>{{ sig.name }}</li>
+                <li>{{ sig }}</li>
             {% endfor %}
             </ul>
         </div>
