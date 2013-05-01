@@ -26,10 +26,11 @@ h1, h2, h3 {
 }
 
 #header {
-    background: @white url(images/sprites.png) 718px -125px no-repeat;
+ 	background-color: @white;
     margin-bottom: 20px;
     border: 1px solid @white;
     border-width: 0 10px 0;
+	position: relative;
 
     h1 {
         color: @dark-blue;
@@ -39,8 +40,28 @@ h1, h2, h3 {
         text-align: center;
         line-height: 123px;
         margin: 0;
-        background: transparent url(images/sprites.png) 0 -260px no-repeat;
     }
+	
+	#BBlogo {
+		display:block;
+		width: 260px;
+		height: 124px;
+		position: absolute;
+		top: 0;
+		left: 0;
+        background: transparent url(images/sprites.png) 0 -260px no-repeat;
+		text-indent: -9999px;
+	}
+	#Sunlogo {
+		background: url("images/sprites.png") no-repeat scroll 40px -125px #FFFFFF;
+		display: block;
+		height: 100px;
+		position: absolute;
+		right: 0;
+		text-indent: -9999px;
+		top: 0;
+		width: 260px;
+	}
 }
 
 #contact {
@@ -109,6 +130,25 @@ h1, h2, h3 {
     }
 }
 
+#letter {
+    float: left;
+    clear: left;
+	background-color: @white;
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding: 40px 70px;
+        h2 {
+            background-color: @dark-blue;
+            color: @white;
+            font-weight: 900;
+            margin: -40px -70px 40px -70px;
+            padding: 10px 20px;
+        }
+		li {
+			margin-bottom: 10px;
+		}
+}
+
 #ayden-photo {
     float: right;
     margin: 20px 10px 20px 20px;
@@ -165,36 +205,47 @@ h1, h2, h3 {
 
     .box {
         padding: 10px;
-        background-color: @dark-blue;
+/*		height: 250px;*/
+        background-color: @white;
         color: @white;
         margin: 0 0 20px;
+		
+		#recent-sigs {
+		    background-color: @white;
+			background-position: -9999px -9999px;
+	
+		}
 
         h2 {
-            margin: 0;
-        }
-    }
+            margin: -10px -10px 10px -10px;
+			background-color: @dark-blue;
+			color: @white;
+			padding-left: 5px;
+       }
+	}
+}
 
-    .petition {
-        .cta;
-        background: @red url(images/sprites.png) 0 -425px no-repeat;
-        font-size: 0;
-        min-height: 186px;
-
-        a {
-            display: block;
-            height: 186px;
-            width: 220px;
-            padding: 10px;
-            margin: -10px;
-        }
+.petition {
+	background: @red url(images/sprites.png) 0 -425px no-repeat;
+	font-size: 0;
+	min-height: 186px;
+	a {
+		display: block;
+		height: 186px;
+		width: 220px;
+		padding: 10px;
+		margin: -10px;
+		color: @dark-blue;
     }
 }
 
-#twitter {
-
+#twitter-widget-0, #twitter-widget-1 {
+	height: 200px;
 }
 
-#need-help {
+.box#need-help {
+		background-color: @dark-blue;
+		color: @white;
 
     .cta {
         text-transform: uppercase;
@@ -244,6 +295,26 @@ h1, h2, h3 {
     a {
         text-decoration: none;
     }
+}
+
+
+
+#petition_page {
+	li {
+		color: @dark-blue;
+    }
+/*	background-color: @white;
+	font-size: 0;
+	min-height: 186px;
+	
+	a {
+		display: block;
+		height: 186px;
+		width: 220px;
+		padding: 10px;
+		margin: -10px;
+		color: @dark-blue;
+    }*/
 }
 
 form {
