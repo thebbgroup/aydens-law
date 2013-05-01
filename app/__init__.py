@@ -1,8 +1,11 @@
 from flask import Flask, render_template
+from flask.ext.mail import Mail
 
 
 app = Flask(__name__)
 app.config.from_object('app.settings')
+
+mail = Mail(app)
 
 @app.errorhandler(404)
 def page_not_found(error):
@@ -16,3 +19,6 @@ import views
 
 from apps.petition import petition_app
 app.register_blueprint(petition_app, url_prefix='/petition')
+
+from apps.your_story import your_story_app
+app.register_blueprint(your_story_app, url_prefix='/your-story')
