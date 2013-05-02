@@ -22,23 +22,20 @@ body {
 h1, h2, h3 {
     font-family: @title-fonts;
     text-transform: uppercase;
-    font-weight: 900;
 }
 
 #header {
- 	background-color: @white;
+    background-color: @white;
     margin-bottom: 20px;
-    border: 1px solid @white;
-    border-width: 0 10px 0;
-	position: relative;
+    padding: 0 10px 0;
+    position: relative;
 
     h1 {
         color: @dark-blue;
         font-family: TheMixBlack, Arial, sans-serif;
         font-size: 400%;
-        font-weight: 900;
         text-align: center;
-        line-height: 123px;
+        line-height: 124px;
         margin: 0;
     }
 	
@@ -94,7 +91,6 @@ h1, h2, h3 {
         h2 {
             background-color: @dark-blue;
             color: @white;
-            font-weight: 900;
             margin: -10px -20px 0;
             padding: 10px 20px;
 
@@ -173,7 +169,8 @@ h1, h2, h3 {
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
-            line-height: 2;
+            line-height: 1.3;
+            padding: 5px 0;
         }
     }
 }
@@ -205,16 +202,8 @@ h1, h2, h3 {
 
     .box {
         padding: 10px;
-/*		height: 250px;*/
         background-color: @white;
-        color: @white;
         margin: 0 0 20px;
-		
-		#recent-sigs {
-		    background-color: @white;
-			background-position: -9999px -9999px;
-	
-		}
 
         h2 {
             margin: -10px -10px 10px -10px;
@@ -240,22 +229,19 @@ h1, h2, h3 {
 }
 
 #twitter-widget-0, #twitter-widget-1 {
-	height: 200px;
+    height: 200px;
 }
 
-.box#need-help {
-		background-color: @dark-blue;
-		color: @white;
+#need-help.box {
+    background-color: @dark-blue;
 
     .cta {
-        text-transform: uppercase;
         font-family: @title-fonts;
+        background-color: @light-blue;
 
         a {
-            background-color: @light-blue;
             display: block;
             text-decoration: none;
-            color: @white;
             padding: 5px 0 5px 5px;
             height: 100px;
         }
