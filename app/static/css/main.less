@@ -275,79 +275,60 @@ h1, h2, h3 {
     }
 }
 
-
-
-#petition_page {
-	li {
-		color: @dark-blue;
-    }
-/*	background-color: @white;
-	font-size: 0;
-	min-height: 186px;
-	
-	a {
-		display: block;
-		height: 186px;
-		width: 220px;
-		padding: 10px;
-		margin: -10px;
-		color: @dark-blue;
-    }*/
-}
-
 form {
     width: 700px;
     float: left;
     clear: left;
-}
 
-fieldset {
-    background-color: @white;
-    padding: 10px 20px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    border: 0;
-
-    legend {
-        display: block;
-        width: 100%;
-        background-color: @dark-blue;
-        color: @white;
-        font-weight: 900;
-        font-family: @title-fonts;
-        text-transform: uppercase;
-        margin: -10px -20px 0;
+    fieldset {
+        background-color: @white;
         padding: 10px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: 0;
+
+        legend {
+            display: block;
+            width: 100%;
+            background-color: @dark-blue;
+            color: @white;
+            font-weight: 900;
+            font-family: @title-fonts;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            margin: -10px -20px 0;
+            padding: 10px 20px;
+        }
     }
-}
 
-.field {
-    padding: 10px 20px;
+    .field {
+        padding: 10px 20px;
 
-    label {
-        display: block;
-        line-height: 2;
+        label {
+            display: block;
+            line-height: 2;
+        }
+
+        input {
+            width: 594px;
+            font-size: 150%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
     }
 
-    input[type="text"] {
-        width: 594px;
-        font-size: 150%;
-        padding: 10px;
-        border: 1px solid #aaa;
-        border-radius: 5px;
-    }
-}
+    .submit {
+        text-align: center;
+        margin-bottom: 20px;
 
-.submit {
-    text-align: center;
-    margin-bottom: 20px;
-
-    input[type="submit"] {
-        background: @red;
-        color: @white;
-        font-family: @title-fonts;
-        text-transform: uppercase;
-        width: 698px;
-        padding: 10px 0;
+        input[type="submit"] {
+            background: @red;
+            color: @white;
+            font-family: @title-fonts;
+            text-transform: uppercase;
+            width: 698px;
+            padding: 10px 0;
+        }
     }
 }

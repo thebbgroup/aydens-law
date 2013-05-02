@@ -1,3 +1,4 @@
+from flask import request
 from google.appengine.api import memcache
 from google.appengine.ext import db
 
@@ -6,7 +7,17 @@ class Signature(db.Model):
     name = db.StringProperty(required=True)
     email = db.StringProperty(required=True)
     dob = db.DateProperty()
+    ip = db.StringProperty()
+    address = db.StringProperty()
+    town = db.StringProperty()
+    postcode = db.StringProperty()
+    country = db.StringProperty()
+    opt_out = db.BooleanProperty()
     created = db.DateTimeProperty(auto_now_add=True)
+
+    def __init__(self, *args, **kwargs):
+        kwargs['ip'] = request.remote_addr
+        super(Signature, self).__init__(*args, **kwargs)
 
     @staticmethod
     def recent():

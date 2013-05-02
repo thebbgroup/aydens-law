@@ -2,7 +2,7 @@
 
 {% block title %} - Sign the Petition{% endblock %}
 
-{% block body_attr %} id="petition_page"{% endblock %}
+{% block body_attr %} class="petition"{% endblock %}
 
 {% block header_title %}Please Sign{% endblock %}
 
@@ -13,11 +13,17 @@
             <legend>Sign the Petition</legend>
             {{ form_field(form.name) }}
             {{ form_field(form.email) }}
-            {# form_field(form.dob) #}
-        </fieldset>
-        <fieldset>
-            <legend>Tell us a little more about you</legend>
-            {# some more form fields #}
+            {{ form_field(form.dob) }}
+            {{ form_field(form.address) }}
+            {{ form_field(form.town) }}
+            {{ form_field(form.postcode) }}
+            {{ form_field(form.country) }}
+            <div class="field">
+                The BB Group will only use your details for the petition and to
+                keep you up to date. We will not give your details to anyone
+                else.
+            </p>
+            {{ form_field(form.opt_out) }}
         </fieldset>
         <div class="submit">
             {{ form.csrf_token }}
