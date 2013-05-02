@@ -38,27 +38,26 @@ h1, h2, h3 {
         line-height: 124px;
         margin: 0;
     }
-	
-	#BBlogo {
-		display:block;
-		width: 260px;
-		height: 124px;
-		position: absolute;
-		top: 0;
-		left: 0;
-        background: transparent url(images/sprites.png) 0 -260px no-repeat;
-		text-indent: -9999px;
-	}
-	#Sunlogo {
-		background: url("images/sprites.png") no-repeat scroll 40px -125px #FFFFFF;
-		display: block;
-		height: 100px;
-		position: absolute;
-		right: 0;
-		text-indent: -9999px;
-		top: 0;
-		width: 260px;
-	}
+
+    .logo {
+        margin-top: -124px;
+        background: transparent url(images/sprites.png) 0 0 no-repeat;
+        text-indent: -9999em;
+    }
+
+    #bb.logo {
+        float: left;
+        width: 260px;
+        height: 124px;
+        background-position: 0 -260px;
+    }
+
+    #sun.logo {
+        float: right;
+        background-position: 40px -125px;
+        height: 100px;
+        width: 260px;
+    }
 }
 
 #contact {
