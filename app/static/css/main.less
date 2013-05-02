@@ -76,7 +76,7 @@ h1, h2, h3 {
     padding: 0 10px;
 }
 
-#main {
+.main {
     width: 700px;
     float: left;
     clear: left;
@@ -125,23 +125,16 @@ h1, h2, h3 {
     }
 }
 
-#letter {
-    float: left;
-    clear: left;
-	background-color: @white;
-	overflow: hidden;
-	margin-bottom: 20px;
-	padding: 40px 70px;
+#letter.main {
+    width: 100%;
+
+    .section {
+        padding: 10px 150px 40px;
+
         h2 {
-            background-color: @dark-blue;
-            color: @white;
-            font-weight: 900;
-            margin: -40px -70px 40px -70px;
-            padding: 10px 20px;
+            margin: -10px -150px 40px;
         }
-		li {
-			margin-bottom: 10px;
-		}
+    }
 }
 
 #ayden-photo {
