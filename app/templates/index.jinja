@@ -170,7 +170,7 @@
     <div id="sidebar">
         <div class="petition cta box">
             <h2>Sign the Petition</h2>
-            <a href="/petition">Click here to sign</a>
+            <a href="{{ url_for('petition.sign') }}">Click here to sign</a>
         </div>
         <div class="box" id="twitter">
             <h2>Twitter Feed</h2>
@@ -186,15 +186,17 @@
             <h2>Need Help?</h2>
             <p class="cta">
                 <a href="http://archive.beatbullying.org/"><span class="arrow-right"></span>
-                Are you a parent experiencing trauma through bullying of your child? 
+                Are you a parent experiencing trauma through bullying of your child?
 				Click here to get help</a>
             </p>
             <p class="cta">
                 <a href="http://www.beatbullying.org/"><span class="arrow-right"></span>
-                Are you a young person that has experienced bullying? 
+                Are you a young person that has experienced bullying?
 				Speak to someone your age on our site</a>
             </p>
         </div>
     </div>
-    <h2 id="tell-your-story" class="cta"><a href="mailto:pressoffice@beatbullying.org?subject=Ayden's+Law+-+My+Story">Tell Your Story</a></h2>
+    <h2 id="tell-your-story" class="cta">
+        <a href="{{ url_for('your_story.tell_me_it') }}">Tell Your Story</a>
+    </h2>
 {% endblock %}

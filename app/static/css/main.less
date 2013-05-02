@@ -199,24 +199,28 @@ h1, h2, h3 {
 
         h2 {
             margin: -10px -10px 10px -10px;
-			background-color: @dark-blue;
-			color: @white;
-			padding-left: 5px;
-       }
-	}
-}
+            padding: 10px;
+            background-color: @dark-blue;
+            color: @white;
+        }
+    }
 
-.petition {
-	background: @red url(images/sprites.png) 0 -425px no-repeat;
-	font-size: 0;
-	min-height: 186px;
-	a {
-		display: block;
-		height: 186px;
-		width: 220px;
-		padding: 10px;
-		margin: -10px;
-		color: @dark-blue;
+    .petition.box {
+        background: @red url(images/sprites.png) 0 -425px no-repeat;
+        font-size: 0;
+        min-height: 186px;
+
+        h2 {
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            height: 186px;
+            width: 220px;
+            padding: 10px;
+            margin: -10px;
+        }
     }
 }
 
