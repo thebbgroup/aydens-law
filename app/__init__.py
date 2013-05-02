@@ -1,11 +1,8 @@
 from flask import Flask, render_template
-from flask.ext.mail import Mail
 
 
 app = Flask(__name__)
 app.config.from_object('app.settings')
-
-mail = Mail(app)
 
 @app.errorhandler(404)
 def page_not_found(error):
