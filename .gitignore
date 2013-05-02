@@ -2,3 +2,4 @@
 .sw?
 .*.sw?
 *.pyc
+app/static/css/main.css
