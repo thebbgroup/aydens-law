@@ -4,13 +4,13 @@
 
 {% block body_attr %} class="petition"{% endblock %}
 
-{% block header_title %}Please Sign{% endblock %}
+{% block header_title %}Ayden&rsquo;s Law.{% endblock %}
 
 {% block content %}
     {% from '_includes/form_macros.jinja' import form_field %}
     <form method="post" action="{{ url_for('petition.sign') }}">
         <fieldset>
-            <legend>Sign the Petition</legend>
+            <legend>Show your support for Ayden&rsquo;s Law by signing up below.</legend>
             {{ form_field(form.name) }}
             {{ form_field(form.email) }}
             {{ form_field(form.dob) }}
