@@ -12,11 +12,11 @@
 <body{% block body_attr %}{% endblock %}>
     {% include '_includes/google-analytics.jinja' %}
     <div id="header">
-        <h1>{% block header_title %}{% endblock %}</h1>
-        <a id="bb" class="logo" href="http://www.beatbullying.org/">BeatBullying</a>
-        <a id="sun" class="logo" href="http://www.thesun.co.uk/">The Sun</a>
+        <h1><a href="/" title="Ayden&#39;s Law home">{% block header_title %}{% endblock %}</a></h1>
+        <a id="bb" target="_blank" class="logo" href="http://www.beatbullying.org/">BeatBullying</a>
+        <a id="sun" target="_blank" class="logo" href="http://www.thesun.co.uk/">The Sun</a>
     </div>
-    <a id="contact" href="mailto:pressoffice@beatbullying.org?subject=Ayden's+Law">Contact us</a>
+    <a id="contact" href="mailto:pressoffice@beatbullying.org?subject=Ayden&#39;s+Law">Contact us</a>
     {% block content %}{% endblock %}
     <div id="footer">
         <div class="details">

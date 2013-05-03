@@ -6,8 +6,23 @@
   </div>
 {% endmacro %}
 
+{% macro form_field_checkbox(field, label=None) %}
+  <div class="field checkbox{% if field.errors %} has_errors{% endif %}">
+    {{ field_label_checkbox(field, label) }}
+    {{ errors_for(field) }}
+  </div>
+{% endmacro %}
+
 {% macro field_label(field, label=None) -%}
   <label for="{{ field.id }}"{% if field.flags.required %} class="required" title="This field is required"{% endif %}>
+    {% if label %}{{ label|e }}{% else %}{{ field.label.text|e }}{% endif %}{% if field.flags.required %}<span>*</span>{% endif %}
+    {% if field.flags.optional %}<span class="optional">(optional)</span>{% endif %}
+  </label>
+{%- endmacro %}
+
+{% macro field_label_checkbox(field, label=None) -%}
+  <label for="{{ field.id }}"{% if field.flags.required %} class="required" title="This field is required"{% endif %}>
+    {{ field(**kwargs) }}
     {% if label %}{{ label|e }}{% else %}{{ field.label.text|e }}{% endif %}{% if field.flags.required %}<span>*</span>{% endif %}
     {% if field.flags.optional %}<span class="optional">(optional)</span>{% endif %}
   </label>
