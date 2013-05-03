@@ -25,7 +25,7 @@
                 </p>
                 <p>
                     BeatBullying, The Sun, and families of children like Ayden
-                    are calling on the Justice Secretary to take action. We
+                    are calling on the Prime Minister to take action. We
                     want to call a summit with him and relevant ministers to
                     discuss how we can prevent any more tragedies &mdash; and
                     the creation of Ayden&#39;s Law, a new children&#39;s
@@ -33,7 +33,7 @@
                     once and for all.
                 </p>
                 <p>
-                    Read <a href="{{ url_for('letter') }}">our letter to the Justice Secretary</a>.
+                    Read <a href="{{ url_for('letter') }}">our letter to the Prime Minister</a>.
                 </p>
             </div>
             <blockquote>
@@ -52,10 +52,10 @@
                 </p>
             </blockquote>
         </div>
-        <div class="section">
+        <div class="section" id="tabbed_section">
             <h2><a href="#default">The Children&rsquo;s Anti-Bullying Bill</a></h2>
             <ul class="tabs">
-                <li><a href="#criminal">Justice<br>for victims</a></li>
+                <li><a href="#criminal" class="active">Justice<br>for victims</a></li>
                 <li><a href="#community">Community<br>protection</a></li>
                 <li><a href="#gov_action">Government<br>action</a></li>
                 <li><a href="#family">Family<br>support</a></li>
@@ -63,7 +63,7 @@
             <div id="tabbed-content">
                 <div id="default" class="content">
                     <p>
-                        We are calling on the Justice Secretary to support a new
+                        We are calling on the Prime Minister to support a new
                         law to protect children who become victims of bullying.
                         Ayden&#39;s Law would:
                     </p>
@@ -75,11 +75,11 @@
                             Increase community-based bullying prevention
                         </li>
                         <li>
-                            Support families with children who bully to change
-                            their behavior
+                            Introduce a statutory requirement for Government to publish 'A Children and Young People's Annual Anti-Bullying Strategy for the UK'
                         </li>
                         <li>
-                            tbc
+                            Support families with children who bully to change
+                            their behavior
                         </li>
                     </ol>
                     <p>
@@ -112,7 +112,7 @@
                     <p>
                         A statutory requirement for Government to publish 'A
                         Children and Young People&#39;s Annual Anti-Bullying
-                        Strategy for the UK' and for Government to report
+                        Strategy for the UK' and for the Prime Minister to report
                         progress to Parliament annually.
                     </p>
                     <p>
@@ -175,7 +175,7 @@
             </p>
         </div>
     </div>
-    <h2 id="tell-your-story" class="cta">
-        <a href="{{ url_for('your_story.tell_me_it') }}">Tell Your Story</a>
+    <h2 id="tell-your-story">
+        <a href="{{ url_for('your_story.tell_me_it') }}" class="cta">Tell Your Story</a>
     </h2>
 {% endblock %}

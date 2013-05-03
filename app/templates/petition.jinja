@@ -4,11 +4,11 @@
 
 {% block body_attr %} class="petition"{% endblock %}
 
-{% block header_title %}Ayden&rsquo;s Law.{% endblock %}
+{% block header_title %}Ayden&rsquo;s Law{% endblock %}
 
 {% block content %}
-    {% from '_includes/form_macros.jinja' import form_field %}
-    <form method="post" action="{{ url_for('petition.sign') }}">
+    {% from '_includes/form_macros.jinja' import form_field, form_field_checkbox %}
+    <form method="post" action="{{ url_for('petition.sign') }}">{{ form.csrf_token }}
         <fieldset>
             <legend>Show your support for Ayden&rsquo;s Law by signing up below.</legend>
             {{ form_field(form.name) }}
@@ -19,15 +19,15 @@
             {{ form_field(form.postcode) }}
             {{ form_field(form.country) }}
             <div class="field">
-                The BB Group will only use your details for the petition and to
-                keep you up to date. We will not give your details to anyone
-                else.
-            </p>
-            {{ form_field(form.opt_out) }}
+                <p>The BB Group will only use your details for the petition and to
+                    keep you up to date. We will not give your details to anyone
+                    else.
+                </p>
+            {{ form_field_checkbox(form.opt_out) }}
+            </div>
         </fieldset>
         <div class="submit">
-            {{ form.csrf_token }}
-            <input type="submit" value="Sign">
+            <input type="submit" value="Join the campaign">
         </div>
     </form>
     <div id="sidebar">

@@ -4,20 +4,25 @@
 
 {% block body_attr %} class="your-story"{% endblock %}
 
-{% block header_title %}Your Story{% endblock %}
+{% block header_title %}Ayden&rsquo;s Law{% endblock %}
 
 {% block content %}
-    {% from '_includes/form_macros.jinja' import form_field %}
-    <form method="post" action="{{ url_for('your_story.tell_me_it') }}">
-        <fieldset>
-            <legend>Tell Us Your Story</legend>
-            {{ form_field(form.name) }}
-            {{ form_field(form.email) }}
-            {{ form_field(form.story) }}
-        </fieldset>
-        <div class="submit">
-            {{ form.csrf_token }}
-            <input type="submit" value="Send">
+ <div class="main">
+        {% from '_includes/form_macros.jinja' import form_field %}
+        <form method="post" action="{{ url_for('your_story.tell_me_it') }}">
+            
+            <fieldset>
+                <legend>Tell Us Your Story</legend>
+                <div class="section">
+                {{ form_field(form.name) }}
+                {{ form_field(form.email) }}
+                {{ form_field(form.story) }}
         </div>
-    </form>
+            </fieldset>
+            <div class="submit">
+                {{ form.csrf_token }}
+                <input type="submit" value="Send us your story">
+            </div>
+        </form>
+</div>
 {% endblock %}
