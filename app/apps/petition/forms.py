@@ -20,5 +20,5 @@ class PetitionForm(Form):
     opt_out = BooleanField('Keep me updated about Ayden\'s Law', default=True)
 
     def validate_dob(form, field):
-        if not dob.match(field.data):
+        if not dob_regex.match(field.data):
             raise ValidationError('Please enter your date of birth DD/MM/YYYY format')
