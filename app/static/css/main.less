@@ -40,15 +40,50 @@ ul li, ol li{
 }
 
 a.cta{
-	width: 100%;
-	line-height: 2em;
-	display: block;
-	background-color: @red;
-	color:@white;
-	.transition(background-color 0.4s ease);
-	&:hover{
-		background-color:@sun-red;
-	}
+    width: 100%;
+    line-height: 2em;
+    display: block;
+    background-color: @red;
+    color:@white;
+    .transition(background-color 0.4s ease);
+    &:hover{
+        background-color:@sun-red;
+    }
+}
+
+.box-shadow (@str) {
+    -webkit-box-shadow: @str;
+    -moz-box-shadow: @str;
+    box-shadow: @str;
+}
+
+#flash {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 960px;
+    padding: 0;
+    position: absolute;
+    top: -50px;
+    z-index: 999;
+    cursor: pointer;
+
+    li {
+        .box-shadow(0 10px 30px -10px black);
+        padding: 50px;
+        margin: 0;
+        font-size: 150%;
+        font-weight: bold;
+
+        &.err {
+            background: #fcc;
+            color: red;
+        }
+
+        &.ack {
+            background: #cfc;
+            color: green;
+        }
+    }
 }
 
 #header {
