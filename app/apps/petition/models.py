@@ -33,23 +33,23 @@ class Signature(db.Model):
 
     @staticmethod
     def recent():
-        sigs = memcache.get('recent-sigs')
+        sigs = cache.get('recent-sigs')
         if sigs is None:
             sigs = Signature.query.order_by(Signature.created)[:10]
             sigs = [sig.name for sig in sigs]
-            memcache.set('recent-sigs', sigs, 3600)
+            cache.set('recent-sigs', sigs, 3600)
         return sigs
 
     def exists(self):
         email = self.email
-        mc = lambda: memcache.get(email)
+        mc = lambda: cache.get(email)
         db = lambda: Signature.query.filter(Signature.email == email).count() > 0
 
         def found_in(search):
             found = search()
             if found:
                 # cache for 5 mins to avoid hitting the DB on repeated signing
-                memcache.set(email, True, 300)
+                cache.set(email, True, 300)
             return found
 
         return found_in(mc) or found_in(db)
@@ -63,7 +63,7 @@ class Signature(db.Model):
 
             # we don't care that this might not match the db
             first_nine = Signature.recent()[:9]
-            memcache.set('recent-sigs', [self.name] + first_nine, 3600)
+            cache.set('recent-sigs', [self.name] + first_nine, 3600)
 
         # cache for 5 mins to avoid hitting the DB on repeated signing
-        memcache.set(self.email, True, 300)
+        cache.set(self.email, True, 300)
