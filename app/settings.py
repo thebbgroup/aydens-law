@@ -9,6 +9,7 @@ if 'SERVER_SOFTWARE' in os.environ and os.environ['SERVER_SOFTWARE'].startswith(
 DEBUG = DEBUG_MODE
 
 CACHE_BACKEND = 'memcached'
+MEMCACHED_SERVER = ['127.0.0.1:11211']
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///aydenslaw.db'
 

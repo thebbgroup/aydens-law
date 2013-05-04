@@ -1,12 +1,12 @@
 from flask import request
 
-from app import config, db
+from app import app, db
 
 
-if config['CACHE_BACKEND'] == 'memcached':
+if app.config['CACHE_BACKEND'] == 'memcached':
     from werkzeug.contrib.cache import MemcachedCache
-    cache = MemcachedCache(['127.0.0.1:11211'])
-elif config['CACHE_BACKEND'] == 'gae':
+    cache = MemcachedCache(app.config['MEMCACHED_SERVER'])
+elif app.config['CACHE_BACKEND'] == 'gae':
     from werkzeug.contrib.cache import GAEMemcachedCache
     cache = GAEMemcachedCache()
 else:
