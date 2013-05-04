@@ -1,7 +1,7 @@
 from flask import Blueprint, flash, render_template, redirect, url_for
 from flask.ext.mail import Message
 
-from app import Mail
+from app import app, mail
 from .forms import TellYourStoryForm
 
 
@@ -26,15 +26,10 @@ def kthxbai():
 
 def send_mail_to_press_office(**data):
     subject = "Ayden's Law: Tell Your Story"
-    try:
-        msg = Message(
-                subject,
-                sender=data['email'],
-                recipients=app.config['EMAIL_RECIPIENTS'])
-        msg.body = ("From: %s <%s>\n"
-                "Subject: %s\n\n"
-                "%s") % (data['name'], data['email'], subject, data['story'])
-        mail.send(msg)
-    except:
-        return False
+    msg = Message(
+            subject,
+            sender="%s <%s>" % (data['name'], data['email']),
+            recipients=app.config['EMAIL_RECIPIENTS'])
+    msg.body = data['story']
+    mail.send(msg)
     return True
