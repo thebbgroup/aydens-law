@@ -1,6 +1,18 @@
 from flask import request
-from google.appengine.api import memcache
 from google.appengine.ext import db
+
+from app import config
+
+
+if config['CACHE_BACKEND'] == 'memcached':
+    from werkzeug.contrib.cache import MemcachedCache
+    cache = MemcachedCache(['127.0.0.1:11211'])
+elif config['CACHE_BACKEND'] == 'gae':
+    from werkzeug.contrib.cache import GAEMemcachedCache
+    cache = GAEMemcachedCache()
+else:
+    from werkzeug.contrib.cache import SimpleCache
+    cache = SimpleCache()
 
 
 class Signature(db.Model):
