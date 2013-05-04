@@ -4,3 +4,4 @@
 *.pyc
 app/static/css/main.css
 venv
+app/aydenslaw.db
