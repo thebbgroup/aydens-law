@@ -28,10 +28,8 @@ def send_mail_to_press_office(**data):
     subject = "Ayden's Law: Tell Your Story"
     msg = Message(
             subject,
-            sender=data['email'],
+            sender="%s <%s>" % (data['name'], data['email']),
             recipients=app.config['EMAIL_RECIPIENTS'])
-    msg.body = ("From: %s <%s>\n"
-            "Subject: %s\n\n"
-            "%s") % (data['name'], data['email'], subject, data['story'])
+    msg.body = data['story']
     mail.send(msg)
     return True
