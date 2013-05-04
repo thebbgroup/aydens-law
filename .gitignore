@@ -3,3 +3,4 @@
 .*.sw?
 *.pyc
 app/static/css/main.css
+venv
