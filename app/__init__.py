@@ -5,7 +5,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config.from_pyfile('config/common.py')
+app.config.from_pyfile('settings/common.py')
 
 if os.getenv('FLASK_CONFIG'):
     app.config.from_envvar('FLASK_CONFIG')
