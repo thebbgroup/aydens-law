@@ -1,7 +1,6 @@
 from flask import request
-from google.appengine.ext import db
 
-from app import config
+from app import config, db
 
 
 if config['CACHE_BACKEND'] == 'memcached':
@@ -16,16 +15,17 @@ else:
 
 
 class Signature(db.Model):
-    name = db.StringProperty(required=True)
-    email = db.StringProperty(required=True)
-    dob = db.DateProperty()
-    ip = db.StringProperty()
-    address = db.StringProperty()
-    town = db.StringProperty()
-    postcode = db.StringProperty()
-    country = db.StringProperty()
-    opt_out = db.BooleanProperty()
-    created = db.DateTimeProperty(auto_now_add=True)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255))
+    email = db.Column(db.String(255), unique=True)
+    dob = db.Column(db.Date)
+    ip = db.Column(db.String(16))
+    address = db.Column(db.String(200))
+    town = db.Column(db.String(50))
+    postcode = db.Column(db.String(20))
+    country = db.Column(db.String(50))
+    opt_out = db.Column(db.Boolean)
+    created = db.Column(db.DateTime, default=db.func.now())
 
     def __init__(self, *args, **kwargs):
         kwargs['ip'] = request.remote_addr
@@ -35,7 +35,7 @@ class Signature(db.Model):
     def recent():
         sigs = memcache.get('recent-sigs')
         if sigs is None:
-            sigs = Signature.all().order("-created").fetch(limit=10)
+            sigs = Signature.query.order_by(Signature.created)[:10]
             sigs = [sig.name for sig in sigs]
             memcache.set('recent-sigs', sigs, 3600)
         return sigs
@@ -43,7 +43,7 @@ class Signature(db.Model):
     def exists(self):
         email = self.email
         mc = lambda: memcache.get(email)
-        db = lambda: Signature.all().filter("email =", email).count() > 0
+        db = lambda: Signature.query.filter(Signature.email == email).count() > 0
 
         def found_in(search):
             found = search()
@@ -58,7 +58,8 @@ class Signature(db.Model):
 
         # prevent duplicate signatures
         if not self.exists():
-            self.put()
+            db.session.add(self)
+            db.session.commit()
 
             # we don't care that this might not match the db
             first_nine = Signature.recent()[:9]
