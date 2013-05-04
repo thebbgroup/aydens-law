@@ -8,7 +8,7 @@ if 'SERVER_SOFTWARE' in os.environ and os.environ['SERVER_SOFTWARE'].startswith(
 
 DEBUG = DEBUG_MODE
 
-CACHE_BACKEND = memcached
+CACHE_BACKEND = 'memcached'
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///aydenslaw.db'
 
