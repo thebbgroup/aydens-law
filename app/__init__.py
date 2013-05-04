@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask.ext.mail import Mail
 from flask.ext.sqlalchemy import SQLAlchemy
 
 
@@ -6,6 +7,8 @@ app = Flask(__name__)
 app.config.from_object('app.settings')
 
 db = SQLAlchemy(app)
+
+mail = Mail(app)
 
 @app.errorhandler(404)
 def page_not_found(error):

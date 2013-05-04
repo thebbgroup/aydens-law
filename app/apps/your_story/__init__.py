@@ -1,6 +1,7 @@
 from flask import Blueprint, flash, render_template, redirect, url_for
-from google.appengine.api import mail
+from flask.ext.mail import Message
 
+from app import Mail
 from .forms import TellYourStoryForm
 
 
@@ -27,14 +28,16 @@ def kthxbai():
     return render_template('your-story-kthxbai.jinja')
 
 def send_mail_to_press_office(**data):
+    subject = "Ayden's Law: Tell Your Story"
     try:
-        msg = mail.EmailMessage(
-                to=recipients,
+        msg = Message(
+                subject,
                 sender=data['email'],
-                subject= "Ayden's Law: Tell Your Story",
-                body=data['story'])
-        msg.check_initialized()
-        msg.send()
+                recipients=recipients)
+        msg.body = ("From: %s <%s>\n"
+                "Subject: %s\n\n"
+                "%s") % (data['name'], data['email'], subject, data['story'])
+        mail.send(msg)
     except:
         return False
     return True
