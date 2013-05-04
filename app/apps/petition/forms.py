@@ -2,7 +2,7 @@ import re
 
 from flask.ext.wtf import Form, BooleanField, TextField
 from flask.ext.wtf.html5 import DateField, EmailField
-from wtforms.validators import Email, Required
+from wtforms.validators import Email, Required, ValidationError
 
 from .models import Signature
 
