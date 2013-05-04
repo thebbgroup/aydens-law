@@ -14,4 +14,8 @@ $(function () {
 
     $('.tabs a').click(show_tab);
     $('.tabs').parent().find('h2 a').click(show_tab);
+
+    $('#flash').click(function () {
+        $(this).fadeOut('slow');
+    });
 });
