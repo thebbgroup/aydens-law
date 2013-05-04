@@ -5,9 +5,6 @@ from app import Mail
 from .forms import TellYourStoryForm
 
 
-recipients = 'andy.driver@thebbgroup.org'
-#recipients = 'pressoffice@beatbullying.org, carina@thebbgroup.org'
-
 your_story_app = Blueprint('your_story', __name__, template_folder='templates')
 
 @your_story_app.route('/', methods=['GET', 'POST'])
@@ -33,7 +30,7 @@ def send_mail_to_press_office(**data):
         msg = Message(
                 subject,
                 sender=data['email'],
-                recipients=recipients)
+                recipients=app.config['EMAIL_RECIPIENTS'])
         msg.body = ("From: %s <%s>\n"
                 "Subject: %s\n\n"
                 "%s") % (data['name'], data['email'], subject, data['story'])
