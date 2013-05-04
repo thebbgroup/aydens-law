@@ -10,14 +10,14 @@
  <div class="main">
         {% from '_includes/form_macros.jinja' import form_field %}
         <form method="post" action="{{ url_for('your_story.tell_me_it') }}">
-            
+
             <fieldset>
                 <legend>Tell Us Your Story</legend>
                 <div class="section">
                 {{ form_field(form.name) }}
                 {{ form_field(form.email) }}
                 {{ form_field(form.story) }}
-        </div>
+                </div>
             </fieldset>
             <div class="submit">
                 {{ form.csrf_token }}
