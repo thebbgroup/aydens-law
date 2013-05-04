@@ -1,7 +1,7 @@
 from flask import Blueprint, flash, render_template, redirect, url_for
 from flask.ext.mail import Message
 
-from app import Mail
+from app import app, mail
 from .forms import TellYourStoryForm
 
 
