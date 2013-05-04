@@ -1,12 +1,4 @@
-import os
-
-
-DEBUG_MODE = False
-
-if 'SERVER_SOFTWARE' in os.environ and os.environ['SERVER_SOFTWARE'].startswith('Dev'):
-    DEBUG_MODE = True
-
-DEBUG = DEBUG_MODE
+DEBUG = False
 
 CACHE_BACKEND = 'memcached'
 MEMCACHED_SERVER = ['127.0.0.1:11211']

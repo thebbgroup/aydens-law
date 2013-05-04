@@ -1,10 +1,14 @@
+import os
 from flask import Flask, render_template
 from flask.ext.mail import Mail
 from flask.ext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config.from_object('app.settings')
+app.config.from_pyfile('settings/common.py')
+
+if os.getenv('FLASK_CONFIG'):
+    app.config.from_envvar('FLASK_CONFIG')
 
 db = SQLAlchemy(app)
 
