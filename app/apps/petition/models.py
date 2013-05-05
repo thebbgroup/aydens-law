@@ -35,7 +35,7 @@ class Signature(db.Model):
     def recent():
         sigs = cache.get('recent-sigs')
         if sigs is None:
-            sigs = Signature.query.order_by(Signature.created)[:10]
+            sigs = Signature.query.order_by(Signature.created.desc())[:10]
             sigs = [sig.name for sig in sigs]
             cache.set('recent-sigs', sigs, 3600)
         return sigs
