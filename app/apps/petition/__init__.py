@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, Response, render_template, request, redirect, url_for
+from functools import wraps
 
 from app import app
 
@@ -21,3 +22,19 @@ def sign():
 @petition_app.route('/thanks')
 def thanks():
     return render_template('thanks.jinja')
+
+def check_auth(username, password):
+    return username in app.config['AUTH_USERS'] and password == app.config['AUTH_USERS'][username]
+
+def authenticate():
+    return Response('Unauthorized', 401,
+            {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
