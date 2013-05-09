@@ -1,0 +1,18 @@
+{% extends '_includes/html5_base.jinja' %}
+
+{% block title %}Stats{% endblock %}
+
+{% block body_attr %} class="stats"{% endblock %}
+
+{% block header_title %}Stats{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <div class="section">
+            <h2>Total Signatures</h2>
+            <p>
+                {{ count }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

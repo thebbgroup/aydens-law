@@ -38,3 +38,9 @@ def requires_auth(f):
             return authenticate()
         return f(*args, **kwargs)
     return decorated
+
+@petition_app.route('/stats')
+@requires_auth
+def stats():
+    count = Signature.query.count()
+    return render_template('stats.jinja', count=count)
