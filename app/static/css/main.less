@@ -32,6 +32,27 @@ ul li, ol li{
     margin-bottom:15px;
     line-height:1.39em;
 }
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 .transition(@transition) {
   -webkit-transition: @transition;
      -moz-transition: @transition;
@@ -152,7 +173,6 @@ a.cta{
     .section {
         background-color: @white;
         padding: 10px 20px 0;
-        overflow: hidden;
         margin-bottom: 20px;
 
         h2 {
@@ -215,6 +235,9 @@ a.cta{
             margin: -10px -150px 40px;
         }
     }
+}
+.thanks .main .section{
+     padding: 10px 150px 80px;
 }
 
 #ayden-photo {
