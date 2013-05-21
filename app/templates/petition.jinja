@@ -7,10 +7,11 @@
 {% block header_title %}Ayden&rsquo;s Law{% endblock %}
 
 {% block content %}
+
     {% from '_includes/form_macros.jinja' import form_field, form_field_checkbox %}
     <form method="post" action="{{ url_for('petition.sign') }}">{{ form.csrf_token }}
         <fieldset>
-            <legend>Show your support for Ayden&rsquo;s Law by signing up below.</legend>
+            <legend>I support the campaign for a Children&rsquo;s Anti-Bullying Bill</legend>
             {{ form_field(form.name) }}
             {{ form_field(form.email) }}
             {{ form_field(form.dob) }}
