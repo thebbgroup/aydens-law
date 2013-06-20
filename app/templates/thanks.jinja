@@ -10,6 +10,21 @@
     <div class="main">
         <div class="section">
             <h2>Thanks for signing the Ayden&rsquo;s Law petition.</h2>
+            <p>
+                <a
+                href="https://twitter.com/intent/follow?screen_name=AydensLaw">Follow
+                us on Twitter</a> for updates.
+            </p>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div id="recent-sigs" class="box">
+            <h2>Recent Signatures</h2>
+            <ul>
+            {% for sig in sigs %}
+                <li>{{ sig }}</li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
 {% endblock %}

@@ -21,7 +21,7 @@ def sign():
 
 @petition_app.route('/thanks')
 def thanks():
-    return render_template('thanks.jinja')
+    return render_template('thanks.jinja', sigs=Signature.recent())
 
 def check_auth(username, password):
     return username in app.config['AUTH_USERS'] and password == app.config['AUTH_USERS'][username]
